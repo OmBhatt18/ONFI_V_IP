@@ -1,0 +1,114 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x5d8d47424490 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x5d8d473fbe10 .scope module, "dummy_dut" "dummy_dut" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "RE_x_t";
+    .port_info 2 /INPUT 1 "RE_x_c";
+    .port_info 3 /INPUT 1 "W_R_x_n";
+    .port_info 4 /INPUT 1 "CE_x_n";
+    .port_info 5 /INPUT 1 "Vcc";
+    .port_info 6 /INPUT 1 "VccQ";
+    .port_info 7 /INPUT 1 "Vss";
+    .port_info 8 /INPUT 1 "VssQ";
+    .port_info 9 /INPUT 1 "VREFQ_x";
+    .port_info 10 /INPUT 1 "Vpp";
+    .port_info 11 /INPUT 1 "CLE_x";
+    .port_info 12 /INPUT 1 "ALE_x";
+    .port_info 13 /INPUT 1 "WE_x_n";
+    .port_info 14 /INPUT 1 "CLK_x";
+    .port_info 15 /INPUT 1 "WP_x_n";
+    .port_info 16 /INOUT 8 "IO0_0";
+    .port_info 17 /INOUT 8 "IO8_15";
+    .port_info 18 /INOUT 1 "DQS_x_t";
+    .port_info 19 /INOUT 1 "DQS_x_c";
+    .port_info 20 /INOUT 1 "DBI_x";
+    .port_info 21 /OUTPUT 1 "ENo";
+    .port_info 22 /INPUT 1 "ENi";
+    .port_info 23 /INOUT 1 "VSP_x";
+    .port_info 24 /INOUT 1 "R";
+    .port_info 25 /INOUT 1 "RFT";
+    .port_info 26 /INOUT 1 "NU";
+    .port_info 27 /INOUT 1 "NC";
+    .port_info 28 /INOUT 1 "ZQ_x";
+o0x705257c55018 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4740d380_0 .net "ALE_x", 0 0, o0x705257c55018;  0 drivers
+o0x705257c55048 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4740d7e0_0 .net "CE_x_n", 0 0, o0x705257c55048;  0 drivers
+o0x705257c55078 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4740dbd0_0 .net "CLE_x", 0 0, o0x705257c55078;  0 drivers
+o0x705257c550a8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d47449c30_0 .net "CLK_x", 0 0, o0x705257c550a8;  0 drivers
+o0x705257c550d8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d47449cf0_0 .net "DBI_x", 0 0, o0x705257c550d8;  0 drivers
+o0x705257c55108 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d47449e00_0 .net "DQS_x_c", 0 0, o0x705257c55108;  0 drivers
+o0x705257c55138 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d47449ec0_0 .net "DQS_x_t", 0 0, o0x705257c55138;  0 drivers
+o0x705257c55168 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d47449f80_0 .net "ENi", 0 0, o0x705257c55168;  0 drivers
+o0x705257c55198 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744a040_0 .net "ENo", 0 0, o0x705257c55198;  0 drivers
+o0x705257c551c8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0x5d8d4744a100_0 .net "IO0_0", 7 0, o0x705257c551c8;  0 drivers
+o0x705257c551f8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0x5d8d4744a1e0_0 .net "IO8_15", 7 0, o0x705257c551f8;  0 drivers
+o0x705257c55228 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744a2c0_0 .net "NC", 0 0, o0x705257c55228;  0 drivers
+o0x705257c55258 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744a380_0 .net "NU", 0 0, o0x705257c55258;  0 drivers
+o0x705257c55288 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744a440_0 .net "R", 0 0, o0x705257c55288;  0 drivers
+o0x705257c552b8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744a500_0 .net "RE_x_c", 0 0, o0x705257c552b8;  0 drivers
+o0x705257c552e8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744a5c0_0 .net "RE_x_t", 0 0, o0x705257c552e8;  0 drivers
+o0x705257c55318 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744a680_0 .net "RFT", 0 0, o0x705257c55318;  0 drivers
+o0x705257c55348 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744a850_0 .net "VREFQ_x", 0 0, o0x705257c55348;  0 drivers
+o0x705257c55378 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744a910_0 .net "VSP_x", 0 0, o0x705257c55378;  0 drivers
+o0x705257c553a8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744a9d0_0 .net "Vcc", 0 0, o0x705257c553a8;  0 drivers
+o0x705257c553d8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744aa90_0 .net "VccQ", 0 0, o0x705257c553d8;  0 drivers
+o0x705257c55408 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744ab50_0 .net "Vpp", 0 0, o0x705257c55408;  0 drivers
+o0x705257c55438 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744ac10_0 .net "Vss", 0 0, o0x705257c55438;  0 drivers
+o0x705257c55468 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744acd0_0 .net "VssQ", 0 0, o0x705257c55468;  0 drivers
+o0x705257c55498 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744ad90_0 .net "WE_x_n", 0 0, o0x705257c55498;  0 drivers
+o0x705257c554c8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744ae50_0 .net "WP_x_n", 0 0, o0x705257c554c8;  0 drivers
+o0x705257c554f8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744af10_0 .net "W_R_x_n", 0 0, o0x705257c554f8;  0 drivers
+o0x705257c55528 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744afd0_0 .net "ZQ_x", 0 0, o0x705257c55528;  0 drivers
+o0x705257c55558 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5d8d4744b090_0 .net "clk", 0 0, o0x705257c55558;  0 drivers
+    .scope S_0x5d8d473fbe10;
+T_0 ;
+    %vpi_call/w 3 33 "$display", "Dummy DUT" {0 0 0};
+    %vpi_call/w 3 34 "$dumpfile", "waveform.vcd" {0 0 0};
+    %vpi_call/w 3 35 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5d8d473fbe10 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/om/tests/ONFI/dummy_dut.v";
