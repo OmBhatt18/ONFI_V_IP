@@ -39,7 +39,7 @@ signal_names_with_alternates = {
     "ZQ_x": ["ZQ_x"]
 }
 
-# Fetch signals function
+
 def fetch_signals(dut):
     found_signals = {}
     unrecognizable_signals = []
@@ -57,23 +57,23 @@ async def test_command_signals(dut):
     await generate_clock(dut)
     await RisingEdge(dut.clk)
 
-    # Fetch all signals
+    
     signals, unrecognizable_signals = fetch_signals(dut)
 
-    # Print fetched signals for debugging
+    
     cocotb.log.info(f"Total signals found: {len(signals)} out of {len(signal_names_with_alternates)}")
     for name, handle in signals.items():
         cocotb.log.info(f"Signal name: {name}, Handle: {handle}")
 
-    # List unrecognizable signals
+   
     if unrecognizable_signals:
         cocotb.log.warning(f"Unrecognizable signals: {', '.join(unrecognizable_signals)}")
 
-    # Add your command tests below
+    
     await test_read_command(dut, signals)
 
 async def test_read_command(dut, signals):
-    # Assuming your read command test logic is here
+    
     pass
 
 @cocotb.test()
