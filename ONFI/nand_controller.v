@@ -1,21 +1,21 @@
-module dummy_dut(
+module nand_controller (
     input clk,
-    output wire RB_x_n,    
-    input wire RE_x_n,
-    input wire RE_x_c,
-    input wire WR_x_n,
-    input wire CE_x_n,
-    input wire Vcc,
-    input wire VccQ,
-    input wire Vss,
-    input wire VssQ,
-    input wire VREFQ_x,
-    input wire Vpp,
-    input wire CLE_x,
-    input wire ALE_x,
-    input wire WE_x_n,
-    input wire CLK_x,
-    input wire WP_x_n,
+    input  wire RB_x_n,
+    output wire RE_x_n,
+    output wire RE_x_c,
+    output wire WR_x_n,
+    output wire CE_x_n,
+    output wire Vcc,
+    output wire VccQ,
+    output wire Vss,
+    output wire VssQ,
+    output wire VREFQ_x,
+    output wire Vpp,
+    output wire CLE_x,
+    output wire ALE_x,
+    output wire WE_x_n,
+    output wire CLK_x,
+    output wire WP_x_n,
 
     inout wire IO0_0,
     inout wire IO1_0,
@@ -48,18 +48,21 @@ module dummy_dut(
     inout wire DQS_x_c,
     inout wire DBI_x,
 
-    output wire ENo,
-    input wire ENi,
+    input wire ENo,
+    output wire ENi,
     inout wire VSP_x,
-    output wire R,
-    output wire RFT,
+    input wire R,
+    input wire RFT,
     inout wire NU,
     inout wire NC,
     inout wire ZQ_x
 );
-    initial begin
-        $display("Dummy DUT");
-        $dumpfile("waveform.vcd");
-        $dumpvars(0, dummy_dut);
-    end
+
+initial begin
+    $display("NAND Controller");
+    $dumpfile("waveform.vcd");
+    $dumpvars(0, nand_controller);
+end
+
 endmodule
+
