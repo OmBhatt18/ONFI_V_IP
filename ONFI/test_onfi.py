@@ -95,7 +95,7 @@ async def test_read_command(dut, signals):
 async def test_reset(dut):
     """Test reset command."""
     await generate_clock(dut)
-    await txn('reset')
+    await txn('reset',dut)
     await Timer(10, units='ns')
 
 @cocotb.test()
@@ -103,7 +103,7 @@ async def test_read_device_id(dut):
     """Test read device ID command."""
     await generate_clock(dut)
     addr = [0x00]  # Example address
-    rv = await txn('read_device_id', addr=addr)
+    rv = await txn('read_device_id',dut,addr=addr)
     dut._log.info(f"Read Device ID: {rv}")
 
 @cocotb.test()
@@ -111,7 +111,7 @@ async def test_block_erase(dut):
     """Test block erase command."""
     await generate_clock(dut)
     addr = [0x00, 0x00, 0x01]  # Example address
-    await txn('block_erase', addr=addr)
+    await txn('block_erase',dut,addr=addr)
     await Timer(10, units='ns')
 
 @cocotb.test()
@@ -119,5 +119,5 @@ async def test_standard_read(dut):
     """Test standard read command."""
     await generate_clock(dut)
     addr = [0x00, 0x00, 0x00, 0x00, 0x00]  # Example address
-    rv = await txn('standard_read', addr=addr)
+    rv = await txn('standard_read',dut, addr=addr)
     dut._log.info(f"Standard Read: {rv}")

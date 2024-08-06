@@ -1,10 +1,10 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1722318597" />
-    <testcase name="test_command_signals" classname="test_onfi" file="/home/om/tests/ONFI/test_onfi.py" lineno="55" time="0.0034515857696533203" sim_time_ns="0.001" ratio_time="0.28972190370933204" />
-    <testcase name="test_reset" classname="test_onfi" file="/home/om/tests/ONFI/test_onfi.py" lineno="79" time="0.0007627010345458984" sim_time_ns="10.001000000000001" ratio_time="13112.608410128167" />
-    <testcase name="test_read_device_id" classname="test_onfi" file="/home/om/tests/ONFI/test_onfi.py" lineno="86" time="9.5367431640625e-05" sim_time_ns="0.0009999999999994458" ratio_time="10.485759999994189" />
-    <testcase name="test_block_erase" classname="test_onfi" file="/home/om/tests/ONFI/test_onfi.py" lineno="94" time="0.0007054805755615234" sim_time_ns="10.001000000000001" ratio_time="14176.152181142279" />
-    <testcase name="test_standard_read" classname="test_onfi" file="/home/om/tests/ONFI/test_onfi.py" lineno="102" time="8.702278137207031e-05" sim_time_ns="0.0009999999999976694" ratio_time="11.491243835589657" />
+    <property name="random_seed" value="1722947267" />
+    <testcase name="test_command_signals" classname="test_onfi" file="/home/om/tests/ONFI_VIP/ONFI_V_IP/ONFI/test_onfi.py" lineno="75" time="0.003278970718383789" sim_time_ns="0.001" ratio_time="0.3049737511815604" />
+    <testcase name="test_reset" classname="test_onfi" file="/home/om/tests/ONFI_VIP/ONFI_V_IP/ONFI/test_onfi.py" lineno="94" time="0.0018134117126464844" sim_time_ns="20.000999999999998" ratio_time="11029.48649802787" />
+    <testcase name="test_read_device_id" classname="test_onfi" file="/home/om/tests/ONFI_VIP/ONFI_V_IP/ONFI/test_onfi.py" lineno="101" time="0.0020797252655029297" sim_time_ns="20.001" ratio_time="9617.135653330277" />
+    <testcase name="test_block_erase" classname="test_onfi" file="/home/om/tests/ONFI_VIP/ONFI_V_IP/ONFI/test_onfi.py" lineno="109" time="0.004527568817138672" sim_time_ns="60.001000000000005" ratio_time="13252.366208741443" />
+    <testcase name="test_standard_read" classname="test_onfi" file="/home/om/tests/ONFI_VIP/ONFI_V_IP/ONFI/test_onfi.py" lineno="117" time="0.005625247955322266" sim_time_ns="70.00099999999999" ratio_time="12444.073675680256" />
   </testsuite>
 </testsuites>

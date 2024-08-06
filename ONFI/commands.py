@@ -1,4 +1,5 @@
-
+import cocotb
+from cocotb.triggers import Timer
 cmds = {
     'reset': {
         'cmd1': 0xFF,
@@ -184,20 +185,17 @@ cmds = {
     }
 }
 
-async def txn(name, addr=None, data=None):
+async def txn(name,dut,addr=None, data=None):
     txn_template = cmds[name]
     txdata = []
 
-    # Add primary command byte
     txdata.append(txn_template['cmd1'])
 
-    # Handle address if specified
     if txn_template['addr_len'] is not None:
         if addr is None:
             addr = [0x00] * txn_template['addr_len']  # Default address if none provided
         txdata.extend(addr[:txn_template['addr_len']])
         
-    # Add optional second command byte if present
     if txn_template['cmd2'] is not None:
         txdata.append(txn_template['cmd2'])
 
@@ -207,19 +205,25 @@ async def txn(name, addr=None, data=None):
     if data is not None:
         txdata.extend(data)
 
-    # Send data
-    await _send_bytes(txdata)
+    await _send_bytes(dut,txdata)
     
-    # Await data if required
     if txn_template.get('await_data'):
         rv = await _get_bytes(len(txdata))
         return rv
     else:
         return None
 
-async def _send_bytes(txdata):
-    print(f"Sending bytes: {txdata}")
+async def _send_bytes(dut,txdata):
+    for byte in txdata:
+        await _drive_to_io_ports(dut,byte)
+        await Timer(10, units='ns')  # Simulate a delay between each byte
 
+async def _drive_to_io_ports(dut,byte):
+    for i in range(8):
+        getattr(dut, f"IO{i}_0").value = (byte >> i) & 0x1
+
+    for i in range(8):
+        getattr(dut, f"IO{i}_1").value = (byte >> (i + 8)) & 0x1
 async def _get_bytes(num_bytes):
     rv = [0xFF] * num_bytes  # Dummy data for simulation
     print(f"Received bytes: {rv}")

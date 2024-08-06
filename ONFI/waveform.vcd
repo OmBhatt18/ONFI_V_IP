@@ -1,5 +1,5 @@
 $date
-	Tue Jul 30 11:19:57 2024
+	Tue Aug  6 17:57:47 2024
 $end
 $version
 	Icarus Verilog
@@ -7,41 +7,145 @@ $end
 $timescale
 	1ps
 $end
-$scope module dummy_dut $end
+$scope module top $end
+$scope module u_nand_controller $end
 $var wire 1 ! ALE_x $end
 $var wire 1 " CE_x_n $end
 $var wire 1 # CLE_x $end
 $var wire 1 $ CLK_x $end
 $var wire 1 % DBI_x $end
-$var wire 1 & DQS_x_c $end
-$var wire 1 ' DQS_x_t $end
+$var wire 1 & DQS $end
+$var wire 1 ' DQS_x_c $end
 $var wire 1 ( ENi $end
 $var wire 1 ) ENo $end
-$var wire 8 * IO0_0 [7:0] $end
-$var wire 8 + IO8_15 [7:0] $end
-$var wire 1 , NC $end
-$var wire 1 - NU $end
-$var wire 1 . R $end
-$var wire 1 / RE_x_c $end
-$var wire 1 0 RE_x_t $end
-$var wire 1 1 RFT $end
-$var wire 1 2 VREFQ_x $end
-$var wire 1 3 VSP_x $end
-$var wire 1 4 Vcc $end
-$var wire 1 5 VccQ $end
-$var wire 1 6 Vpp $end
-$var wire 1 7 Vss $end
-$var wire 1 8 VssQ $end
-$var wire 1 9 WE_x_n $end
-$var wire 1 : WP_x_n $end
-$var wire 1 ; W_R_x_n $end
-$var wire 1 < ZQ_x $end
-$var wire 1 = clk $end
+$var wire 1 * IO0_0 $end
+$var wire 1 + IO0_1 $end
+$var wire 1 , IO10 $end
+$var wire 1 - IO11 $end
+$var wire 1 . IO12 $end
+$var wire 1 / IO13 $end
+$var wire 1 0 IO14 $end
+$var wire 1 1 IO15 $end
+$var wire 1 2 IO1_0 $end
+$var wire 1 3 IO1_1 $end
+$var wire 1 4 IO2_0 $end
+$var wire 1 5 IO2_1 $end
+$var wire 1 6 IO3_0 $end
+$var wire 1 7 IO3_1 $end
+$var wire 1 8 IO4_0 $end
+$var wire 1 9 IO4_1 $end
+$var wire 1 : IO5_0 $end
+$var wire 1 ; IO5_1 $end
+$var wire 1 < IO6_0 $end
+$var wire 1 = IO6_1 $end
+$var wire 1 > IO7_0 $end
+$var wire 1 ? IO7_1 $end
+$var wire 1 @ IO8 $end
+$var wire 1 A IO9 $end
+$var wire 1 B NC $end
+$var wire 1 C NU $end
+$var wire 1 D R $end
+$var wire 1 E RB_x_n $end
+$var wire 1 F RE_x_c $end
+$var wire 1 G RE_x_n $end
+$var wire 1 H RFT $end
+$var wire 1 I VREFQ_x $end
+$var wire 1 J VSP_x $end
+$var wire 1 K Vcc $end
+$var wire 1 L VccQ $end
+$var wire 1 M Vpp $end
+$var wire 1 N Vss $end
+$var wire 1 O VssQ $end
+$var wire 1 P WE_x_n $end
+$var wire 1 Q WP_x_n $end
+$var wire 1 R WR_x_n $end
+$var wire 1 S ZQ_x $end
+$var wire 1 T clk $end
+$upscope $end
+$upscope $end
+$scope module top $end
+$scope module u_dummy_dut $end
+$var wire 1 ! ALE_x $end
+$var wire 1 " CE_x_n $end
+$var wire 1 # CLE_x $end
+$var wire 1 $ CLK_x $end
+$var wire 1 % DBI_x $end
+$var wire 1 & DQS $end
+$var wire 1 ' DQS_x_c $end
+$var wire 1 ( ENi $end
+$var wire 1 ) ENo $end
+$var wire 1 * IO0_0 $end
+$var wire 1 + IO0_1 $end
+$var wire 1 , IO10 $end
+$var wire 1 - IO11 $end
+$var wire 1 . IO12 $end
+$var wire 1 / IO13 $end
+$var wire 1 0 IO14 $end
+$var wire 1 1 IO15 $end
+$var wire 1 2 IO1_0 $end
+$var wire 1 3 IO1_1 $end
+$var wire 1 4 IO2_0 $end
+$var wire 1 5 IO2_1 $end
+$var wire 1 6 IO3_0 $end
+$var wire 1 7 IO3_1 $end
+$var wire 1 8 IO4_0 $end
+$var wire 1 9 IO4_1 $end
+$var wire 1 : IO5_0 $end
+$var wire 1 ; IO5_1 $end
+$var wire 1 < IO6_0 $end
+$var wire 1 = IO6_1 $end
+$var wire 1 > IO7_0 $end
+$var wire 1 ? IO7_1 $end
+$var wire 1 @ IO8 $end
+$var wire 1 A IO9 $end
+$var wire 1 B NC $end
+$var wire 1 C NU $end
+$var wire 1 D R $end
+$var wire 1 E RB_x_n $end
+$var wire 1 F RE_x_c $end
+$var wire 1 G RE_x_n $end
+$var wire 1 H RFT $end
+$var wire 1 I VREFQ_x $end
+$var wire 1 J VSP_x $end
+$var wire 1 K Vcc $end
+$var wire 1 L VccQ $end
+$var wire 1 M Vpp $end
+$var wire 1 N Vss $end
+$var wire 1 O VssQ $end
+$var wire 1 P WE_x_n $end
+$var wire 1 Q WP_x_n $end
+$var wire 1 R WR_x_n $end
+$var wire 1 S ZQ_x $end
+$var wire 1 T clk $end
+$upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-1=
+1T
+zS
+zR
+zQ
+zP
+zO
+zN
+zM
+zL
+zK
+zJ
+zI
+zH
+zG
+zF
+zE
+zD
+zC
+zB
+zA
+z@
+z?
+z>
+z=
 z<
 z;
 z:
@@ -59,8 +163,8 @@ z/
 z.
 z-
 z,
-bz +
-bz *
+z+
+z*
 z)
 z(
 z'
@@ -71,82 +175,731 @@ z#
 z"
 z!
 $end
+#1
+0?
+0=
+0;
+09
+07
+05
+03
+0+
+1>
+1<
+1:
+18
+16
+14
+12
+1*
 #501
-0=
+0T
 #1001
-1=
+1T
 #1501
-0=
+0T
 #2001
-1=
+1T
 #2501
-0=
+0T
 #3001
-1=
+1T
 #3501
-0=
+0T
 #4001
-1=
+1T
 #4501
-0=
-#5001
-1=
+0T
+#5000
+1T
 #5501
-0=
+0T
 #6001
-1=
+1T
 #6501
-0=
+0T
 #7001
-1=
+1T
 #7501
-0=
+0T
 #8001
-1=
+1T
 #8501
-0=
+0T
 #9001
-1=
+1T
 #9501
-0=
-#10003
-1=
-#10503
-0=
-#11003
-1=
-#11503
-0=
-#12003
-1=
-#12503
-0=
-#13003
-1=
-#13503
-0=
-#14003
-1=
-#14503
-0=
-#15003
-1=
-#15503
-0=
-#16003
-1=
-#16503
-0=
-#17003
-1=
-#17503
-0=
-#18003
-1=
-#18503
-0=
-#19003
-1=
-#19503
-0=
-#20005
+0T
+#10000
+1T
+#10501
+0T
+#11001
+1T
+#11501
+0T
+#12001
+1T
+#12501
+0T
+#13001
+1T
+#13501
+0T
+#14001
+1T
+#14501
+0T
+#15000
+1T
+#15501
+0T
+#16001
+1T
+#16501
+0T
+#17001
+1T
+#17501
+0T
+#18001
+1T
+#18501
+0T
+#19001
+1T
+#19501
+0T
+#20000
+1T
+#20002
+0<
+0:
+06
+04
+02
+0*
+#20502
+0T
+#21002
+1T
+#21502
+0T
+#22002
+1T
+#22502
+0T
+#23002
+1T
+#23502
+0T
+#24002
+1T
+#24502
+0T
+#25000
+1T
+#25502
+0T
+#26002
+1T
+#26502
+0T
+#27002
+1T
+#27502
+0T
+#28002
+1T
+#28502
+0T
+#29002
+1T
+#29502
+0T
+#30000
+1T
+#30002
+0>
+08
+#30502
+0T
+#31002
+1T
+#31502
+0T
+#32002
+1T
+#32502
+0T
+#33002
+1T
+#33502
+0T
+#34002
+1T
+#34502
+0T
+#35000
+1T
+#35502
+0T
+#36002
+1T
+#36502
+0T
+#37002
+1T
+#37502
+0T
+#38002
+1T
+#38502
+0T
+#39002
+1T
+#39502
+0T
+#40000
+1T
+#40003
+1<
+1:
+#40503
+0T
+#41003
+1T
+#41503
+0T
+#42003
+1T
+#42503
+0T
+#43003
+1T
+#43503
+0T
+#44003
+1T
+#44503
+0T
+#45000
+1T
+#45503
+0T
+#46003
+1T
+#46503
+0T
+#47003
+1T
+#47503
+0T
+#48003
+1T
+#48503
+0T
+#49003
+1T
+#49503
+0T
+#50000
+1T
+#50003
+0<
+0:
+#50503
+0T
+#51003
+1T
+#51503
+0T
+#52003
+1T
+#52503
+0T
+#53003
+1T
+#53503
+0T
+#54003
+1T
+#54503
+0T
+#55000
+1T
+#55503
+0T
+#56003
+1T
+#56503
+0T
+#57003
+1T
+#57503
+0T
+#58003
+1T
+#58503
+0T
+#59003
+1T
+#59503
+0T
+#60000
+1T
+#60503
+0T
+#61003
+1T
+#61503
+0T
+#62003
+1T
+#62503
+0T
+#63003
+1T
+#63503
+0T
+#64003
+1T
+#64503
+0T
+#65000
+1T
+#65503
+0T
+#66003
+1T
+#66503
+0T
+#67003
+1T
+#67503
+0T
+#68003
+1T
+#68503
+0T
+#69003
+1T
+#69503
+0T
+#70000
+1T
+#70003
+1*
+#70503
+0T
+#71003
+1T
+#71503
+0T
+#72003
+1T
+#72503
+0T
+#73003
+1T
+#73503
+0T
+#74003
+1T
+#74503
+0T
+#75000
+1T
+#75503
+0T
+#76003
+1T
+#76503
+0T
+#77003
+1T
+#77503
+0T
+#78003
+1T
+#78503
+0T
+#79003
+1T
+#79503
+0T
+#80000
+1T
+#80003
+1>
+1<
+18
+0*
+#80503
+0T
+#81003
+1T
+#81503
+0T
+#82003
+1T
+#82503
+0T
+#83003
+1T
+#83503
+0T
+#84003
+1T
+#84503
+0T
+#85000
+1T
+#85503
+0T
+#86003
+1T
+#86503
+0T
+#87003
+1T
+#87503
+0T
+#88003
+1T
+#88503
+0T
+#89003
+1T
+#89503
+0T
+#90000
+1T
+#90503
+0T
+#91003
+1T
+#91503
+0T
+#92003
+1T
+#92503
+0T
+#93003
+1T
+#93503
+0T
+#94003
+1T
+#94503
+0T
+#95000
+1T
+#95503
+0T
+#96003
+1T
+#96503
+0T
+#97003
+1T
+#97503
+0T
+#98003
+1T
+#98503
+0T
+#99003
+1T
+#99503
+0T
+#100000
+1T
+#100004
+0>
+0<
+08
+#100504
+0T
+#101004
+1T
+#101504
+0T
+#102004
+1T
+#102504
+0T
+#103004
+1T
+#103504
+0T
+#104004
+1T
+#104504
+0T
+#105000
+1T
+#105504
+0T
+#106004
+1T
+#106504
+0T
+#107004
+1T
+#107504
+0T
+#108004
+1T
+#108504
+0T
+#109004
+1T
+#109504
+0T
+#110000
+1T
+#110504
+0T
+#111004
+1T
+#111504
+0T
+#112004
+1T
+#112504
+0T
+#113004
+1T
+#113504
+0T
+#114004
+1T
+#114504
+0T
+#115000
+1T
+#115504
+0T
+#116004
+1T
+#116504
+0T
+#117004
+1T
+#117504
+0T
+#118004
+1T
+#118504
+0T
+#119004
+1T
+#119504
+0T
+#120000
+1T
+#120504
+0T
+#121004
+1T
+#121504
+0T
+#122004
+1T
+#122504
+0T
+#123004
+1T
+#123504
+0T
+#124004
+1T
+#124504
+0T
+#125000
+1T
+#125504
+0T
+#126004
+1T
+#126504
+0T
+#127004
+1T
+#127504
+0T
+#128004
+1T
+#128504
+0T
+#129004
+1T
+#129504
+0T
+#130000
+1T
+#130504
+0T
+#131004
+1T
+#131504
+0T
+#132004
+1T
+#132504
+0T
+#133004
+1T
+#133504
+0T
+#134004
+1T
+#134504
+0T
+#135000
+1T
+#135504
+0T
+#136004
+1T
+#136504
+0T
+#137004
+1T
+#137504
+0T
+#138004
+1T
+#138504
+0T
+#139004
+1T
+#139504
+0T
+#140000
+1T
+#140504
+0T
+#141004
+1T
+#141504
+0T
+#142004
+1T
+#142504
+0T
+#143004
+1T
+#143504
+0T
+#144004
+1T
+#144504
+0T
+#145000
+1T
+#145504
+0T
+#146004
+1T
+#146504
+0T
+#147004
+1T
+#147504
+0T
+#148004
+1T
+#148504
+0T
+#149004
+1T
+#149504
+0T
+#150000
+1T
+#150504
+0T
+#151004
+1T
+#151504
+0T
+#152004
+1T
+#152504
+0T
+#153004
+1T
+#153504
+0T
+#154004
+1T
+#154504
+0T
+#155000
+1T
+#155504
+0T
+#156004
+1T
+#156504
+0T
+#157004
+1T
+#157504
+0T
+#158004
+1T
+#158504
+0T
+#159004
+1T
+#159504
+0T
+#160000
+1T
+#160004
+1:
+18
+#160504
+0T
+#161004
+1T
+#161504
+0T
+#162004
+1T
+#162504
+0T
+#163004
+1T
+#163504
+0T
+#164004
+1T
+#164504
+0T
+#165000
+1T
+#165504
+0T
+#166004
+1T
+#166504
+0T
+#167004
+1T
+#167504
+0T
+#168004
+1T
+#168504
+0T
+#169004
+1T
+#169504
+0T
+#170000
+1T
+#170005
